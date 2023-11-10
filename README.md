@@ -12,7 +12,7 @@ The problem: It can be hard for Lightning Network node operators to determine wh
 
 This Python code aggregates transactions and provides an at-a-glance vizualization of where traffic was heavy or light, which channels cluster together and how fees were set relative to other nodes.
 
-The input to this is a transaction history CSV file, exported from the RTL routing interface
+The input to this is a transaction history CSV file, exported from the RTL routing interface. 
 A sample file, Forwarding-history-sample.csv is provided. The sample data has been anonymized for privacy, but actual RTL data will display actual node names.
 
 1. Node Creation: Each node represents a channel that has participated in some routing
@@ -41,8 +41,9 @@ cytoscape allows interactive zoom and the dragging of nodes for improved visuali
 3) Install the dependencies listed in requirements.txt with 'pip install -r requirements.txt'
 4) Open Jupyter Notebook or Jupyter Lab from Anaconda (see note below for large transaction volumes)
 5) Open _LN Routing Node Visualization.ipynb_ from the cloned directory inside Jupyter
-6) Modify the call to load_data(), as needed
-7) In Jupyter 'Run All Cells'
+6) Use RTL to export transactions into a CSV file and copy it into the same LNRoutingVizualization directory
+7) Modify the call to load_data(), as needed, to point at the RTL transaction file
+8) In Jupyter 'Run All Cells'
 
 ## Screenshots
 
