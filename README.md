@@ -39,11 +39,12 @@ cytoscape allows interactive zoom and the dragging of nodes for improved visuali
 1) Install Anaconda
 2) Clone the LNRoutingVizualization repository to your local machine and navigate to the cloned directory in Anaconda Powershell Prompt: 'cd LNRoutingVizualization'
 3) Install the dependencies listed in requirements.txt with 'pip install -r requirements.txt'
-4) Open Jupyter Notebook or Jupyter Lab from Anaconda (see note below for large transaction volumes)
-5) Open _LN Routing Node Visualization.ipynb_ from the cloned directory inside Jupyter
-6) Use RTL to export transactions into a CSV file and copy it into the same LNRoutingVizualization directory
-7) Modify the call to load_data(), as needed, to point at the RTL transaction file
-8) In Jupyter 'Run All Cells'
+4) Setup the cytoscape widget to render correctly in Jupyter: 'jupyter nbextension enable --py --sys-prefix ipycytoscape'
+5) Open Jupyter Notebook or Jupyter Lab from Anaconda (see note below for large transaction volumes)
+6) Open _LN Routing Node Visualization.ipynb_ from the cloned directory inside Jupyter
+7) Use RTL to export transactions into a CSV file and copy it into the same LNRoutingVizualization directory
+8) Modify the call to load_data(), as needed, to point at the RTL transaction file
+9) In Jupyter 'Run All Cells'
 
 ## Screenshots
 
