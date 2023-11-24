@@ -114,8 +114,11 @@ If successful the output should look something like this:
 ## Testing
 
 This code was run in Jupyter Notebook and Jupyter Lab from Anaconda 2.5.1 on Windows 11.
+
 It was tested with over 10,000 transactions. The graph gets a little 'dense' (GPT-4V's description), but is definitely still helpful, particularly by taking advantage of cytoscape's interactive capabilties. 
+
 The gRPC version was tested using 24 simulated LND nodes, of which one was a routing node connected to each of the others. A few hundred simulated routing transactions were generated randomly.
+
 The output from this version looked like this:
 
 ![alt text](sample_output_gRPC.png "gRPC graph")
