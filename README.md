@@ -40,6 +40,7 @@ cytoscape allows interactive zoom and the dragging of nodes for improved visuali
 ## Prerequisites (RTL)
 
 * The Ride The Lightning interface to your node, which can be downloaded as specified on the Ride-The-Lightning/RTL github repository.
+* LND backend
 
 ## Prerequisites (gRPC)
 
@@ -113,7 +114,8 @@ If successful the output should look something like this:
 
 ## Testing
 
-This code was run in Jupyter Notebook and Jupyter Lab from Anaconda 2.5.1 on Windows 11.
+This code was run in Jupyter Notebook and Jupyter Lab from Anaconda 2.5.1 on Windows 11. 
+The backend was LND v0.17.2 and RTL was v0.14.1.
 
 It was tested with over 10,000 transactions. The graph gets a little 'dense' (GPT-4V's description), but is definitely still helpful, particularly by taking advantage of cytoscape's interactive capabilties. 
 
