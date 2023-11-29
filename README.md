@@ -40,12 +40,13 @@ cytoscape allows interactive zoom and the dragging of nodes for improved visuali
 ## Prerequisites (RTL)
 
 * The Ride The Lightning interface to your node, which can be downloaded as specified on the Ride-The-Lightning/RTL github repository.
-* LND backend
+* LND or Eclair backend
 
 ## Prerequisites (gRPC)
 
 * Python Version: Ensure that you are using a Python version compatible with LND's gRPC requirements. As of 12/24/2023, Python 3.7 or higher is recommended.
 * gRPC Tools: You need the gRPC tools for Python, which can be installed using pip.
+* LND backend
 * LND Source Code: The Protobuf (*.proto) files are part of the LND source code, which can be cloned from the LND GitHub repository as follows:
  - Clone the LND Repository: Clone the LND GitHub repository to your local machine.
  - git clone https://github.com/lightningnetwork/lnd.git
@@ -115,9 +116,9 @@ If successful the output should look something like this:
 ## Testing
 
 This code was run in Jupyter Notebook and Jupyter Lab from Anaconda 2.5.1 on Windows 11. 
-The backend was LND v0.17.2 and RTL was v0.14.1.
+The backends tested were LND v0.17.0 and Eclair v0.9.0. RTL was v0.14.1.
 
-It was tested with over 10,000 transactions. The graph gets a little 'dense' (GPT-4V's description), but is definitely still helpful, particularly by taking advantage of cytoscape's interactive capabilties. 
+It was tested with over 12,000 transactions. The graph gets a little 'dense' (GPT-4V's description), but is definitely still helpful, particularly by taking advantage of cytoscape's interactive capabilties. 
 
 The gRPC version was tested using 24 simulated LND nodes, of which one was a routing node connected to each of the others. A few hundred simulated routing transactions were generated randomly.
 
