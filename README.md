@@ -140,6 +140,7 @@ _jupyter lab --NotebookApp.iopub_data_rate_limit=1.0e10_
 * This code was written collaboratively with GPT-4V. Thank you Assistant!
 * A series of [excellent articles on ipycytoscape](https://joseberlines.medium.com/learning-and-visualising-graphs-with-ipycytoscape-1ca150f24933) by Jose Ferro inspired some styling issue workarounds
 * [Ride the Lightning](https://github.com/Ride-The-Lightning/RTL)
+* Feedback, suggestions and test data from the Plebnet community on Telegram
 
 ## License
 
