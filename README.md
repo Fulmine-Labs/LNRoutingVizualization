@@ -30,6 +30,9 @@ A sample file, Forwarding-history-sample.csv is provided. The sample data has be
 To achieve this, we used the networkx library, a tool for creating and analyzing networks and the ipycytoscape library to visualize and interact with the networkx graph.
 cytoscape allows interactive zoom and the dragging of nodes for improved visualization
 
+## Current Version
+The current stable version of the project is 1.0.0. See the [CHANGELOG.md](./CHANGELOG.md) for details about this release.
+
 ## Prerequisites (General)
 
 * A working Bitcoin Lighning Network routing node, with some active channels - see [RaspiBolt](https://raspibolt.org/) for detailed instructions on how to setup a node running on a Raspberry Pi
