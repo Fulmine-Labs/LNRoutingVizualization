@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+******************************************
+
+## [1.0.1] - 11/30/2023
+
+### Fixed
+hardcoded localhost value in create_grpc_channel #10
+
+
+******************************************
+
 ## [1.0.0] - 11/30/2023
 ### Added
 - Initial release of the project.

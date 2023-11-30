@@ -2,7 +2,7 @@
 
 To create a network graph based on relative transactional volume and related fees between channels.
 
-Date: 11/24/2023
+Date: 11/30/2023
 
 Fulmine Labs LLC
 
@@ -31,7 +31,7 @@ To achieve this, we used the networkx library, a tool for creating and analyzing
 cytoscape allows interactive zoom and the dragging of nodes for improved visualization
 
 ## Current Version
-The current stable version of the project is 1.0.0. See the [CHANGELOG.md](./CHANGELOG.md) for details about this release.
+The current stable version of the project is 1.0.1. See the [CHANGELOG.md](./CHANGELOG.md) for details about this release.
 
 ## Prerequisites (General)
 
