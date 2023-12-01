@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 
 ******************************************
 
+## [1.0.2] - 12/1/2023
+
+### Fixed
+documentation incorrect for starting Jupyter notebook or lab for large numbers of transactions bug #14
+dump the ipycytoscape widget to a high resolution image file #12 (workaround documented)
+
+
+******************************************
+
 ## [1.0.1] - 11/30/2023
 
 ### Fixed

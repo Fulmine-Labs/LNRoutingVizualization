@@ -2,7 +2,7 @@
 
 To create a network graph based on relative transactional volume and related fees between channels.
 
-Date: 11/30/2023
+Date: 12/01/2023
 
 Fulmine Labs LLC
 
@@ -31,7 +31,7 @@ To achieve this, we used the networkx library, a tool for creating and analyzing
 cytoscape allows interactive zoom and the dragging of nodes for improved visualization
 
 ## Current Version
-The current stable version of the project is 1.0.1. See the [CHANGELOG.md](./CHANGELOG.md) for details about this release.
+The current stable version of the project is 1.0.2. See the [CHANGELOG.md](./CHANGELOG.md) for details about this release.
 
 ## Prerequisites (General)
 
@@ -92,7 +92,8 @@ If you encounter version compatibility issues, consider using a Python virtual e
     rpcserver = 'localhost:10009'
 ```
 8) Set the path to the Protobuf files `protobuf_file_location = r'D:\lnd\proto\lnd\lnrpc'` and import these modules as needed to interact with LND using gRPC.
-10) In Jupyter 'Run All Cells'
+10) In Jupyter 'Run All Cells'. 
+11) Zoom on the widget with the mousewheel, drag the whole graph or just nodes with left click
 
 
 ## Usage for RTL
@@ -107,6 +108,7 @@ If you encounter version compatibility issues, consider using a Python virtual e
 8) Use RTL to export transactions into a CSV file and copy it into the same LNRoutingVizualization directory
 9) Modify `RTL_file = "Forwarding-history-sample.csv"` location as needed, to point at the RTL transaction file
 10) In Jupyter 'Run All Cells'
+11) Zoom on the widget with the mousewheel, drag the whole graph or just nodes with left click
 
 ## Screenshots
 
@@ -132,11 +134,15 @@ The output from this version looked like this:
 ## Known issues
 
 1) To avoid 'datarate is exceeded' errors in Jupyter, for large numbers of transactions it is recommended to start Jupyter from Anaconda Powershell:
-_jupyter notebook --NotebookApp.iopub_data_rate_limit=1.0e10_
+jupyter notebook --NotebookApp.iopub_data_rate_limit=1.0e10_ --NotebookApp.iopub_msg_rate_limit=1.0e10
 or
-_jupyter lab --NotebookApp.iopub_data_rate_limit=1.0e10_
+jupyter lab --NotebookApp.iopub_data_rate_limit=1.0e10_ --NotebookApp.iopub_msg_rate_limit=1.0e10
 
 2) If the first transaction happens to include a node who's name is a decimal number, node formatting information may be lost
+
+3) It is not possible to save the cytoscape widget from Python. As a workaround:
+* Right click and select 'Create new view for output' for more real estate.
+* Windows Key + Shift + S (or other snipping tool) to copy a screenshot to the paste buffer
 
 ## Acknowledgements
 
