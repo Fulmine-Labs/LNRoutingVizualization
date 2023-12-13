@@ -3,3 +3,7 @@ protobuf
 networkx
 pandas
 ipycytoscape
+matplotlib
+time
+numpy
+datetime

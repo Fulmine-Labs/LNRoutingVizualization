@@ -1,6 +1,6 @@
 # Network graph for a Bitcoin Lightning Network routing node
 
-To create a network graph based on relative transactional volume and related fees between channels.
+To create network graphs based on relative transactional volume and related fees between channels.
 
 Date: 12/01/2023
 
@@ -22,16 +22,17 @@ A sample file, Forwarding-history-sample.csv is provided. The sample data has be
 2. Edge Creation: Each edge between two nodes represents the transactional volume between those two channels, where the thickness or color of the edge represents the normalized transactional volume
 3. Node Size: The size of the node indicates the sum of the transactions for that channel
 4. Node Color: The node color indicates the average fee for that node:
- *   Red no outbound transactions
- *   Orange lowest fees
+ *   Red no or lowest outbound transactions
+ *   Orange low fees
  *   Yellow medium fees 
  *   Green highest fees
 
-To achieve this, we used the networkx library, a tool for creating and analyzing networks and the ipycytoscape library to visualize and interact with the networkx graph.
-cytoscape allows interactive zoom and the dragging of nodes for improved visualization
+To achieve this, we used the networkx library, a tool for creating and analyzing networks and the ipycytoscape/matplotlib libraries to visualize and interact with the networkx graph.
+# ipycytoscape allows interactive zoom and the dragging of nodes for improved visualization
+# matplotlib allows sorting, formatting and export of the graph
 
 ## Current Version
-The current stable version of the project is 1.0.2. See the [CHANGELOG.md](./CHANGELOG.md) for details about this release.
+The current stable version of the project is 1.1.0. See the [CHANGELOG.md](./CHANGELOG.md) for details about this release.
 
 ## Prerequisites (General)
 
@@ -84,16 +85,18 @@ If you encounter version compatibility issues, consider using a Python virtual e
 4) Setup the cytoscape widget to render correctly in Jupyter: `'jupyter nbextension enable --py --sys-prefix ipycytoscape'`
 5) Open Jupyter Notebook or Jupyter Lab from Anaconda (see note below for large transaction volumes)
 6) Open _LN Routing Node Visualization.ipynb_ from the cloned directory inside Jupyter
-7) Set `data_access_method = "gRPC"`
-8) Set your routing node's certificate file path, macaroon file path and server port. For example:
+7) Edit any display parameters in the first cell, as needed
+8) Set `data_access_method = "gRPC"`
+9) Set your routing node's certificate file path, macaroon file path and server port. For example:
 ```
     cert_file = r'D:\lnd\node1\tls.cert'
     macaroon_file = r'D:\lnd\node1\data\chain\bitcoin\regtest\admin.macaroon'
     rpcserver = 'localhost:10009'
 ```
-8) Set the path to the Protobuf files `protobuf_file_location = r'D:\lnd\proto\lnd\lnrpc'` and import these modules as needed to interact with LND using gRPC.
-10) In Jupyter 'Run All Cells'. 
-11) Zoom on the widget with the mousewheel, drag the whole graph or just nodes with left click
+10) Set the path to the Protobuf files `protobuf_file_location = r'D:\lnd\proto\lnd\lnrpc'` and import these modules as needed to interact with LND using gRPC.
+11) Edit the date/time range in the fourth cell of the script 
+12) In Jupyter 'Run All Cells'. 
+13) Zoom on the ipycytoscape widget with the mousewheel, drag the whole graph or just nodes with left click
 
 
 ## Usage for RTL
@@ -104,11 +107,12 @@ If you encounter version compatibility issues, consider using a Python virtual e
 4) Setup the cytoscape widget to render correctly in Jupyter: `'jupyter nbextension enable --py --sys-prefix ipycytoscape'`
 5) Open Jupyter Notebook or Jupyter Lab from Anaconda (see note below for large transaction volumes)
 6) Open _LN Routing Node Visualization.ipynb_ from the cloned directory inside Jupyter
-7) Set `data_access_method = "RTL"`
-8) Use RTL to export transactions into a CSV file and copy it into the same LNRoutingVizualization directory
-9) Modify `RTL_file = "Forwarding-history-sample.csv"` location as needed, to point at the RTL transaction file
-10) In Jupyter 'Run All Cells'
-11) Zoom on the widget with the mousewheel, drag the whole graph or just nodes with left click
+7) Edit any display parameters in the first cell, as needed
+8) Set `data_access_method = "RTL"`
+9) Use RTL to export transactions into a CSV file and copy it into the same LNRoutingVizualization directory
+10) Modify `RTL_file = "Forwarding-history-sample.csv"` location as needed, to point at the RTL transaction file
+11) In Jupyter 'Run All Cells'
+13) Zoom on the ipycytoscape widget with the mousewheel, drag the whole graph or just nodes with left click
 
 ## Screenshots
 
@@ -116,7 +120,11 @@ If successful the output should look something like this:
 
 
 
-![alt text](sample_output_RTL.png "RTL graph")
+![alt text](sample_output_RTL.png "RTL ipycytoscape graph")
+
+and this:
+
+![alt text](sample_output_static_graph.png "RTL matplotlib graph")
 
 ## Testing
 

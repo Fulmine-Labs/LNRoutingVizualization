@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file.
 
 ******************************************
 
+## [1.1.0] - 12/13/2023
+
+### Added
+- This version includes:
+	A new static, matplotlib-based graph
+        Selection of constants that define graph properties
+        Export of the new graph to a PNG file
+        Sorting of the new graph by fee
+        
+### Fixed
+create a matplotlib widget with the same properties as the cytoscape widget and save that widget to a file #15
+
 ## [1.0.2] - 12/1/2023
 
 ### Fixed
