@@ -27,9 +27,9 @@ A sample file, Forwarding-history-sample.csv is provided. The sample data has be
  *   Yellow medium fees 
  *   Green highest fees
 
-To achieve this, we used the networkx library, a tool for creating and analyzing networks and the ipycytoscape/matplotlib libraries to visualize and interact with the networkx graph.
-# ipycytoscape allows interactive zoom and the dragging of nodes for improved visualization
-# matplotlib allows sorting, formatting and export of the graph
+To achieve this, we used the networkx library, a tool for creating and analyzing networks and the ipycytoscape/matplotlib libraries to visualize and interact with the networkx graph:
+ * ipycytoscape allows interactive zoom and the dragging of nodes for improved visualization
+ * matplotlib allows sorting, formatting and export of the graph
 
 ## Current Version
 The current stable version of the project is 1.1.0. See the [CHANGELOG.md](./CHANGELOG.md) for details about this release.
@@ -116,13 +116,13 @@ If you encounter version compatibility issues, consider using a Python virtual e
 
 ## Screenshots
 
-If successful the output should look something like this:
+If successful the output should look something like this in ipycytoscape:
 
 
 
 ![alt text](sample_output_RTL.png "RTL ipycytoscape graph")
 
-and this:
+and this in matplotlib:
 
 ![alt text](sample_output_static_graph.png "RTL matplotlib graph")
 
